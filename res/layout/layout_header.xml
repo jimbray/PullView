@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pull_header_heigth" >
+    
+    <LinearLayout android:id="@+id/layout_loading"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/pull_header_heigth"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="invisible">
+        <ProgressBar android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_marginRight="@dimen/pgb_margin_right"/>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="@string/loading_text"/>
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/layout_hint"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView android:id="@+id/iv_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pull_arrow_down"
+            android:layout_marginRight="@dimen/point_margin_right"/>
+        <TextView android:id="@+id/tv_refersh_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pull_to_refresh"/>
+    </LinearLayout>
+
+</RelativeLayout>
